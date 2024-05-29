@@ -1,0 +1,121 @@
+/* Stile per il tabellone */
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stile per le righe */
+.row {
+  display: flex;
+}
+
+/* Stile per i pulsanti */
+div div button {
+  width: 50px; /* Larghezza fissa */
+  height: 50px; /* Altezza fissa */
+  /* Altri stili desiderati */
+  background-color: #f9f9f9;
+  
+}
+/*font segno (X e O)*/
+.sign{
+  color: #88bbf1;
+  font-size: 16px; /* Dimensione del testo */
+}
+
+.btn_reset button {
+  width: 100%;
+}
+
+/* login --- */
+/* Stile per il contenitore della login */
+.login {
+  margin-top: auto;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #2fc9f4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(71, 146, 211, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Stile per il testo all'interno del contenitore della login */
+.login p {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Contenitore per ciascuna coppia label-input */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group:focus-within { 
+
+  background-color: #88bbf1;
+
+}
+/* Stile per le etichette dei campi di input */
+.login label {
+  width: 100px; /* Larghezza fissa per le etichette */
+  margin-right: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Stile per i campi di input */
+.login input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #9ac2ed;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.login input[type="text"]:focus {
+  border-color: #9ac2ed; /* Colore del bordo quando l'input è selezionato */
+}
+/* Stile per il pulsante di invio */
+.login button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #88bbf1;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Stile per il pulsante di invio al passaggio del mouse */
+.login button[type="submit"]:hover {
+  background-color: #82b8f1;
+}
+
+body,html,button,.login{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+}
+
+
+/* container info player*/
+.container{
+  font-size: 0;
+}
+.container div{
+  display: inline-block;
+  width: 30%;
+  padding: 10px;
+  margin: 5px;
+  font-size: initial;
+}

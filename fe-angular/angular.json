@@ -61,8 +61,7 @@
             },
             "development": {
               "buildTarget": "fe-angular:build:development"
-            }
-          },
+            }          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -91,5 +90,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

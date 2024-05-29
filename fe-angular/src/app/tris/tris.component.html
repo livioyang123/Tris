@@ -1,0 +1,64 @@
+
+<body>
+
+  <div *ngIf="!login_success" class="login">
+  <p>Inserisci i nomi dei Giocatori</p>
+
+  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="form-group">
+      <label for="player1">Giocatore1:</label>
+      <input type="text" name="player1" ngModel required>
+    </div>
+
+    <div class="form-group">
+      <label for="player2">Giocatore2:</label>
+      <input type="text" name="player2" ngModel required>
+    </div>
+
+    <button type="submit">Start</button>
+  </form>
+</div>
+
+
+<div *ngIf="login_success">
+  <!-- info player  -->
+  <div class="container">
+    <div>
+      Giocatore 1 : {{player1}}
+      <br>
+      <div class="sign">{{segno[0]}}</div>
+    </div>
+    <div>
+      Tris
+      <br>
+      <div class="sign">{{punteggio_p1}} : {{punteggio_p2}}</div>
+    </div>
+    <div>
+      Giocatore 2 : {{player2}}
+      <br>
+      <div class="sign">{{segno[1]}}</div>
+    </div>
+  </div>
+
+
+  <!-- tris render -->
+  <div class="board">
+    
+    <div *ngFor="let row of array; let rowIndex = index" class="row">
+      <button *ngFor="let cell of row; let colIndex = index"
+              [disabled]="isDisabled(rowIndex, colIndex)"
+              (click)="click(rowIndex, colIndex)"
+              class="cell">
+        <label class="sign">{{ cell }}</label>
+      </button>
+    </div>
+    
+  </div>
+  <!--  end tris  -->
+
+    <h1>{{response}}</h1>
+    <div *ngIf="btn_reset" class="btn_reset"><button (click)="reset()">play again</button></div>
+
+</div>
+  
+</body>
